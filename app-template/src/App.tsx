@@ -4,12 +4,10 @@ import {BrowserRouter as Router, Redirect, Switch, Route} from 'react-router-dom
 import {Layout} from "antd";
 import Service from "./services/Service";
 import NavBar from "./components/NavBar";
-
-import {LogoutOutlined} from '@ant-design/icons';
 import Home from "./pages/Home";
 
 const App = () => {
-    const {Header, Content, Footer, Sider} = Layout;
+    const {Content, Footer, Sider} = Layout;
     const [collapsed, setCollapsed] = useState(false);
 
     useEffect(() => {

@@ -1,35 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="mem" uuid="8365f8ab-41c8-46fc-a37e-f7890adacba2">
-      <database-info product="H2" version="1.4.200 (2019-10-14)" jdbc-version="4.1" driver-name="H2 JDBC Driver" driver-version="1.4.200 (2019-10-14)" dbms="H2" exact-version="1.4.200" exact-driver-version="1.4">
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+    <data-source name="db" uuid="ab46c69d-046b-40be-beb4-e2be94201d89">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
       <secret-storage>master_key</secret-storage>
-      <auth-required>false</auth-required>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="database" negative="1">
-            <node kind="schema" negative="1" />
-          </node>
-        </introspection-scope>
-      </schema-mapping>
-    </data-source>
-    <data-source name="file" uuid="e07eb2a5-ce16-4e19-95ad-a7c4a31ce5d1">
-      <database-info product="H2" version="1.4.200 (2019-10-14)" jdbc-version="4.1" driver-name="H2 JDBC Driver" driver-version="1.4.200 (2019-10-14)" dbms="H2" exact-version="1.4.200" exact-driver-version="1.4">
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>sa</user-name>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="database" qname="@">
-            <node kind="schema" qname="@" />
-          </node>
-        </introspection-scope>
-      </schema-mapping>
+      <user-name>admin</user-name>
+      <schema-mapping />
     </data-source>
   </component>
 </project>
