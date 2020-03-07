@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b3cea7c6-e5a4-4058-88c7-ee6e74791f60" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="demodb@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="demodb@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="demodb@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="demodb: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="demodb@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="demodb: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="domainentity: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YnWFtrlYsFUqLDaw53aN5g6uHp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dao/src/main/resources/db/migration" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\protector\work\back-end-template\dao\src\main\resources\db\migration" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\protector\work\back-end-template\dao\src\main" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BackEndTemplate" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="os.demo.web.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="os.demo.web.BackEndTemplate" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.BackEndTemplate" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:demodb@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:demodb@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@7b556856" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:demodb@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@71b2a206" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:demodb@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@7c1eb36" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b3cea7c6-e5a4-4058-88c7-ee6e74791f60" name="Default Changelist" comment="" />
+      <created>1583578737434</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583578737434</updated>
+      <workItem from="1583578741641" duration="8784000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Assign_Data_Sources" timestamp="1583585543008">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Assign_Data_Sources/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583585543008" />
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583579416062">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583579416062" />
+    <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1583584098954">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583584098954" />
+    <state x="549" y="437" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583584524125">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="549" y="437" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583584524125" />
+    <state x="715" y="241" key="#xdebugger.evaluate" timestamp="1583585579058">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="715" y="241" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583585579058" />
+    <state width="1879" height="195" key="GridCell.Tab.0.bottom" timestamp="1583588000400">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1879" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583588000400" />
+    <state width="1879" height="195" key="GridCell.Tab.0.center" timestamp="1583588000400">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1879" height="195" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583588000400" />
+    <state width="1879" height="195" key="GridCell.Tab.0.left" timestamp="1583588000399">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1879" height="195" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583588000399" />
+    <state width="1879" height="195" key="GridCell.Tab.0.right" timestamp="1583588000400">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1879" height="195" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583588000400" />
+    <state width="1879" height="195" key="GridCell.Tab.1.bottom" timestamp="1583588000400">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1879" height="195" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583588000400" />
+    <state width="1879" height="195" key="GridCell.Tab.1.center" timestamp="1583588000400">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1879" height="195" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583588000400" />
+    <state width="1879" height="195" key="GridCell.Tab.1.left" timestamp="1583588000400">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1879" height="195" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583588000400" />
+    <state width="1879" height="195" key="GridCell.Tab.1.right" timestamp="1583588000400">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1879" height="195" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583588000400" />
+    <state width="1879" height="195" key="GridCell.Tab.2.bottom" timestamp="1583588000400">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1879" height="195" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583588000400" />
+    <state width="1879" height="195" key="GridCell.Tab.2.center" timestamp="1583588000400">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1879" height="195" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583588000400" />
+    <state width="1879" height="195" key="GridCell.Tab.2.left" timestamp="1583588000400">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1879" height="195" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583588000400" />
+    <state width="1879" height="195" key="GridCell.Tab.2.right" timestamp="1583588000400">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1879" height="195" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583588000400" />
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1583586583947">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583586583947" />
+    <state x="0" y="135" key="new project wizard" timestamp="1583579032312">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="135" key="new project wizard/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583579032312" />
+    <state x="1920" y="99" key="new project wizard/0.0.1920.1040/1920.0.1280.760@1920.0.1280.760" timestamp="1583578756457" />
+    <state x="623" y="225" key="search.everywhere.popup" timestamp="1583583803615">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040/1920.0.1280.760@0.0.1920.1040" timestamp="1583583803615" />
+  </component>
+</project>

@@ -1,6 +1,12 @@
 import apiInstance from "../utils/api";
 import {notification} from "antd";
 
+
+type simpleObj = {
+    field: string;
+}
+
+
 class Service {
 
     static openSuccessHealthCheckNotification = () => {
@@ -24,7 +30,9 @@ class Service {
     };
 
     static healthCheck = () => apiInstance.get('/all')
-        .then(() => Service.openSuccessHealthCheckNotification())
+        .then((res) => {
+            Service.openSuccessHealthCheckNotification();
+        })
         .catch((err) => Service.openFailedHealthCheckNotification(err));
 }
 export default Service;
