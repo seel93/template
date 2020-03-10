@@ -17,4 +17,8 @@ public class DomainEntityService {
     public List<DomainEntity> getStuff() {
         return ImmutableList.copyOf(initRepository.findAll());
     }
+
+    public void addEntity(DomainEntity domainEntity){
+        initRepository.save(domainEntity);
+    }
 }

@@ -1,13 +1,20 @@
 import './App.css';
 import React, {useEffect, useState} from 'react';
-import {BrowserRouter as Router, Redirect, Switch, Route} from 'react-router-dom';
-import {Layout} from "antd";
+import {Redirect, Switch} from 'react-router-dom';
+import {Breadcrumb, Layout} from "antd";
 import Service from "./services/Service";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
+import About from "./pages/About";
+import AppRouter from "./components/AppRouter";
+import {
+    MenuUnfoldOutlined,
+    MenuFoldOutlined,
+} from '@ant-design/icons';
 
 const App = () => {
-    const {Content, Footer, Sider} = Layout;
+
+    const {Header, Sider, Content, Footer} = Layout;
     const [collapsed, setCollapsed] = useState(false);
 
     useEffect(() => {
@@ -20,24 +27,35 @@ const App = () => {
 
     return (
         <Layout style={{minHeight: '100vh'}}>
-            <Sider collapsible collapsed={collapsed} onCollapse={toggle}>
-                <h1 style={{color: "white"}}>App </h1>
+            <Sider trigger={null} collapsible collapsed={collapsed} onCollapse={toggle}>
+                <h3>
+                    <span>App</span>
+                </h3>
                 <NavBar/>
             </Sider>
             <Layout className="site-layout">
-                <Content className={"content"}>
-                    <Router>
-                        <Switch>
-                            <Route path="/">
-                                <Home/>
-                            </Route>
-                            <Route path="/*">
-                                <Redirect to={'/'}/>
-                            </Route>
-                        </Switch>
-                    </Router>
+                <Header className="site-layout-background" style={{padding: 2}}>
+                    {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+                        className: 'trigger',
+                        onClick: toggle,
+                    })}
+                </Header>
+                <Content
+                    className="site-layout-background"
+                    style={{
+                        margin: '24px 16px',
+                        padding: 24,
+                        minHeight: 280,
+                    }}
+                >
+                    <Switch>
+                        <AppRouter exact path={'/'} component={Home}/>
+                        <AppRouter exact path={'/about'} component={About}/>
+                        <AppRouter path={'/*'}>
+                            <Redirect to={'/'}/>
+                        </AppRouter>
+                    </Switch>
                 </Content>
-                <Footer style={{textAlign: 'center'}}>Created by: Øystein Seel 2020</Footer>
             </Layout>
         </Layout>
     );
@@ -45,6 +63,12 @@ const App = () => {
 
 export default App;
 
+/*
+        <Layout style={{minHeight: '100vh'}}>
+                <Footer style={{textAlign: 'center'}}>Created by: Øystein Seel 2020</Footer>
+<Content className={"content"}>
+</Content>
+*/
 
 
 
