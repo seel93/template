@@ -6,7 +6,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "domainEntity", schema="demodb")
+@Table(name = "domain_entity", schema="demodb")
 @Getter
 @Setter
 public class DomainEntity {

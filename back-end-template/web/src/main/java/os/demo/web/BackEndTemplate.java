@@ -7,8 +7,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableJpaRepositories(basePackages = {"os.demo"})
-@EntityScan(basePackages = {"os.demo"})
+@EnableJpaRepositories(basePackages = {"os.demo.dao"})
+@EntityScan(basePackages = {"os.demo.domain"})
 @ComponentScan(basePackages = {"os.demo"})
 public class BackEndTemplate {
     public static void main(String[] args) {

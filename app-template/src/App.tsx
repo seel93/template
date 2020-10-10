@@ -11,6 +11,7 @@ import {
     MenuUnfoldOutlined,
     MenuFoldOutlined,
 } from '@ant-design/icons';
+import Customer from "./pages/Customer";
 
 const App = () => {
 
@@ -51,6 +52,7 @@ const App = () => {
                     <Switch>
                         <AppRouter exact path={'/'} component={Home}/>
                         <AppRouter exact path={'/about'} component={About}/>
+                        <AppRouter exact path={'/customer'} component={Customer}/>
                         <AppRouter path={'/*'}>
                             <Redirect to={'/'}/>
                         </AppRouter>
