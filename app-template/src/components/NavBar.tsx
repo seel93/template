@@ -12,8 +12,13 @@ const NavBar = () => {
         </Menu.Item>
         <Menu.Item key="2">
             <SearchOutlined/>
-            <span>About</span>
-            <Link to={'/about'}/>
+            <span>Customer</span>
+            <Link to={'/customer'}/>
+        </Menu.Item>
+        <Menu.Item key="3">
+            <SearchOutlined/>
+            <span>Order</span>
+            <Link to={'/order'}/>
         </Menu.Item>
     </Menu>
 };
