@@ -16,7 +16,7 @@ public class CustomerOrder {
     Long id;
     int customerId;
     int addressMovingTo;
-    int getAddressMovingFrom;
+    int addressMovingFrom;
     LocalDate completionDate;
     String comment;
 }

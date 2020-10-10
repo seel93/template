@@ -13,6 +13,7 @@ import {
 } from '@ant-design/icons';
 import CustomerPage from "./pages/CustomerPage";
 import OrderPage from "./pages/OrderPage";
+import {MetaProvider} from "./context/MetaContext";
 
 const App = () => {
 
@@ -50,29 +51,31 @@ const App = () => {
                         minHeight: 280,
                     }}
                 >
-                    <Switch>
-                        <AppRouter exact path={'/'} component={Home}/>
-                        <AppRouter exact path={'/about'} component={About}/>
-                        <AppRouter exact path={'/customer'} component={CustomerPage}/>
-                        <AppRouter exact path={'/order'} component={OrderPage}/>
-                        <AppRouter path={'/*'}>
-                            <Redirect to={'/'}/>
-                        </AppRouter>
-                    </Switch>
+                    <MetaProvider>
+                        <Switch>
+                            <AppRouter exact path={'/'} component={Home}/>
+                            <AppRouter exact path={'/about'} component={About}/>
+                            <AppRouter exact path={'/customer'} component={CustomerPage}/>
+                            <AppRouter exact path={'/order'} component={OrderPage}/>
+                            <AppRouter path={'/*'}>
+                                <Redirect to={'/'}/>
+                            </AppRouter>
+                        </Switch>
+                        </MetaProvider>
                 </Content>
             </Layout>
         </Layout>
-    );
+);
 };
 
 export default App;
 
 /*
-        <Layout style={{minHeight: '100vh'}}>
-                <Footer style={{textAlign: 'center'}}>Created by: Øystein Seel 2020</Footer>
-<Content className={"content"}>
-</Content>
-*/
+    <Layout style={{minHeight: '100vh'}}>
+        <Footer style={{textAlign: 'center'}}>Created by: Øystein Seel 2020</Footer>
+        <Content className={"content"}>
+        </Content>
+        */
 
 
 
