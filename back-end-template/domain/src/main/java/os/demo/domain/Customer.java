@@ -2,13 +2,31 @@ package os.demo.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Getter
 @Setter
+@Entity
 public class Customer {
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     Long id;
-    String name;
+    String firstName;
+    String lastName;
     String email;
+    String phoneNumber;
+
+    public Customer(String firstName, String lastName, String email, String phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
+    public Customer() {
+
+    }
 }

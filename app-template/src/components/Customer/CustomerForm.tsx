@@ -19,10 +19,10 @@ const CustomerForm = () => {
             <Form.Item name="lastName" rules={[{required: true}]} label='Last name'>
                 <Input/>
             </Form.Item>
-            <Form.Item name="customerEmail" rules={[{required: true}]} label='Email'>
+            <Form.Item name="email" rules={[{required: true}]} label='Email'>
                 <Input type={'email'}/>
             </Form.Item>
-            <Form.Item name="phone" rules={[{required: true}]} label='Phone'>
+            <Form.Item name="phoneNumber" rules={[{required: true}]} label='Phone'>
                 <InputNumber/>
             </Form.Item>
             <Button htmlType={'submit'} type='primary'>Submit</Button>

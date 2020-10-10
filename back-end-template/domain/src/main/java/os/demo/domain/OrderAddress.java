@@ -2,11 +2,13 @@ package os.demo.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.Value;
-import org.springframework.data.annotation.Id;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Getter
 @Setter
+@Entity
 public class OrderAddress {
     @Id
     Long id;
