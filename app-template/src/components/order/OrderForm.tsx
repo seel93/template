@@ -4,15 +4,17 @@ import {Customer} from "../../models/Customer";
 import CustomerService from "../../services/CustomerService";
 import {useMetaContext} from "../../context/MetaContext";
 import AddressComponent from "../common/AddressComponent";
+import {SaveOutlined} from "@ant-design/icons";
 
 const OrderForm = () => {
     const [form] = Form.useForm();
     const [customers, setCustomers] = useState<Customer []>([]);
+    const [existingAddress, setExistingAddress] = useState<boolean>(true);
     const {orderTypes} = useMetaContext();
 
     useEffect(() => {
         CustomerService.fetchAllCustomers().then(setCustomers);
-    },[])
+    }, [])
 
     const handleSubmit = (values: any) => console.log(values);
     return <>
@@ -36,15 +38,22 @@ const OrderForm = () => {
                     )}
                 </Select>
             </Form.Item>
-            <Form.Item label={'addressMovingFrom'} rules={[{required: true}]}>
-                <AddressComponent/>
+            <Form.Item label={'Address moving from'} rules={[{required: true}]} name={'addressMovingFrom'}>
+                <AddressComponent existingAddress={existingAddress}/>
+                <Button type={'link'} onClick={() => setExistingAddress(!existingAddress)}> create new <SaveOutlined/>
+                </Button>
             </Form.Item>
-            <Form.Item label={'addressMovingTo'} rules={[{required: true}]}>
-                <AddressComponent/>
+            <Form.Item label={'Address moving to'} rules={[{required: true}]} name={'addressMovingTo'}>
+                <AddressComponent existingAddress={existingAddress}/>
+
+                {existingAddress &&
+                <Button type={'link'} onClick={() => setExistingAddress(!existingAddress)}> create new <SaveOutlined/>
+                </Button>
+                }
             </Form.Item>
 
             <Form.Item label={'Date of completion'} rules={[{required: true}]} name={'completionDate'}>
-                <DatePicker />
+                <DatePicker/>
             </Form.Item>
 
             <Form.Item label={'Comment'} rules={[{required: true}]}>
@@ -56,8 +65,7 @@ const OrderForm = () => {
             </Form.Item>
 
         </Form>
-        </>
-
+    </>
 
 
 }
