@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import os.demo.dao.CustomerOrderRepository;
 import os.demo.domain.CustomerOrder;
+import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -13,14 +14,15 @@ public class CustomerOrderService {
 
 
     public Long createCustomerOrder(CustomerOrder customerOrder) {
-        //CustomerOrder customerOrder1 = new CustomerOrder(
-        //        customerOrder.getAddressMovingTo(),
-        //        customerOrder.getAddressMovingFrom(),
-        //        customerOrder.getCompletionDate(),
-        //        customerOrder.getComment()
-        //);
         return customerOrderRepository.save(customerOrder).getId();
     }
 
+    public List<CustomerOrder> getAllOrders(){
+        return customerOrderRepository.findAll();
+    }
+
+    public void deleteOrder(Long id){
+        customerOrderRepository.deleteById(id);
+    }
 
 }

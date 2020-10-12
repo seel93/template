@@ -31,3 +31,11 @@ Z
 *src/components/common/AddressComponent.tsx,7\3\73d6e7e3747fdda038d7d2327a1530ae44ac9b4c
 R
 "src/components/order/OrderForm.tsx,d\e\de34a6cd83f9e974100a46a7e500f2320a45b57f
+=
+src/config.ts,0\8\0808bc7167af4635e91ec47e9b3e79d3bec85510
+K
+src/models/CustomerOrder.ts,9\6\96a86e2993017c859ce3a9ba556b7b09e8032da1
+T
+$src/services/CustomerOrderService.ts,e\a\ea28aa0cce5094658aa85ece8204a48da5cc84fc
+S
+#src/components/order/OrderTable.tsx,f\c\fcebdc34a5ee312c766bb47ff24d8bfd34899e11

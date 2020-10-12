@@ -31,3 +31,7 @@ p
 @web/src/main/java/os/demo/web/controllers/AddressController.java,8\4\84c1abea51f7ca730ed433721e76da08e4b70bb0
 j
 :service/src/main/java/os/demo/service/CustomerService.java,3\6\36c5ceed893346fff53207e06b4f919cb6c82e7c
+o
+?service/src/main/java/os/demo/service/CustomerOrderService.java,b\3\b37105a52b0203dd8082185ba9190dee2683bb6b
+v
+Fweb/src/main/java/os/demo/web/controllers/CustomerOrderController.java,b\d\bd74dc0b6e550f3f31f4a1f5eee6aa74dae85a8a

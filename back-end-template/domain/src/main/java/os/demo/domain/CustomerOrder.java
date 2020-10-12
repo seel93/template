@@ -18,6 +18,7 @@ public class CustomerOrder {
     @GeneratedValue(strategy= GenerationType.AUTO)
     Long id;
     int customerId;
+    int orderTypeId;
     int addressMovingTo;
     int addressMovingFrom;
     LocalDate completionDate;
