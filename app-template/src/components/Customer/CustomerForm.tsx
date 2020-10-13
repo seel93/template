@@ -1,9 +1,13 @@
 import React from "react"
 import {Button, Form, Input, InputNumber, message} from "antd";
 import CustomerService from "../../services/CustomerService";
+import {Customer} from "../../models/Customer";
 
+interface CustomerFormProps {
+    initialValues?: Customer;
+}
 
-const CustomerForm = () => {
+const CustomerForm = (props: CustomerFormProps) => {
     const [form] = Form.useForm();
 
     const handleSubmit = (values: any) =>
@@ -12,7 +16,14 @@ const CustomerForm = () => {
             .catch(() => message.error('Failed to create customer'));
 
     return <>
-        <Form form={form} onFinish={handleSubmit}>
+        <Form form={form} onFinish={handleSubmit} layout='vertical'
+        initialValues={props.initialValues && {
+            firstName: props.initialValues.firstName,
+            lastName: props.initialValues.lastName,
+            email: props.initialValues.email,
+            phoneNumber: props.initialValues.phoneNumber
+        }}
+        >
             <Form.Item name="firstName" rules={[{required: true}]} label='First name'>
                 <Input/>
             </Form.Item>
