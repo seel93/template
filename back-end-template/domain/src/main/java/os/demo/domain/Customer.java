@@ -1,6 +1,7 @@
 package os.demo.domain;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,14 +20,10 @@ public class Customer {
     String email;
     String phoneNumber;
 
-    public Customer(String firstName, String lastName, String email, String phoneNumber) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-    }
-
-    public Customer() {
-
+    public void update(Customer customer) {
+        this.setFirstName(customer.getFirstName());
+        this.setLastName(customer.getLastName());
+        this.setEmail(customer.getEmail());
+        this.setPhoneNumber(customer.getPhoneNumber());
     }
 }

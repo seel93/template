@@ -1,8 +1,7 @@
 import './App.css';
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {Redirect, Switch} from 'react-router-dom';
 import {Layout} from "antd";
-import Service from "./services/Service";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import AppRouter from "./components/AppRouter";
@@ -19,10 +18,6 @@ const App = () => {
 
     const {Header, Sider, Content} = Layout;
     const [collapsed, setCollapsed] = useState(false);
-
-    useEffect(() => {
-        Service.healthCheck();
-    }, []);
 
     const toggle = () => {
         setCollapsed(!collapsed);
@@ -58,11 +53,11 @@ const App = () => {
                                 <Redirect to={'/'}/>
                             </AppRouter>
                         </Switch>
-                        </MetaProvider>
+                    </MetaProvider>
                 </Content>
             </Layout>
         </Layout>
-);
+    );
 };
 
 export default App;

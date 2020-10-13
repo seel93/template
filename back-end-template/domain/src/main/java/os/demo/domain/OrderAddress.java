@@ -2,7 +2,6 @@ package os.demo.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,13 +18,9 @@ public class OrderAddress {
     String zip;
     String city;
 
-    public OrderAddress(String street, String zip, String city) {
-        this.street = street;
-        this.zip = zip;
-        this.city = city;
-    }
-
-    public OrderAddress() {
-
+    public void updateOrderAddress(OrderAddress orderAddress){
+        this.setStreet(orderAddress.getStreet());
+        this.setZip(orderAddress.getZip());
+        this.setCity(orderAddress.getCity());
     }
 }

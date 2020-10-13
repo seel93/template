@@ -20,19 +20,20 @@ public class CustomerController {
 
     @GetMapping("/all")
     public ResponseEntity<List<Customer>> fetchAllCustomers() {
+        logger.info("Fetching all customers");
         return ResponseEntity.ok(customerService.fetchAllCustomers());
     }
 
     @PostMapping("/new")
     public ResponseEntity<Long> newCustomer(@RequestBody Customer customer) {
-        logger.info("Creating new customer");
+        logger.info("Creating new customer: {}", customer);
         return ResponseEntity.ok(customerService.createCustomer(customer));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Long> updateCustomer(@PathVariable Long id, @RequestBody Customer customer){
+    public ResponseEntity<Long> updateCustomer(@RequestBody Customer customer){
         logger.info("Updating customer with id: {}", customer.getId());
-        return ResponseEntity.ok(customerService.updateCustomer(id, customer));
+        return ResponseEntity.ok(customerService.updateCustomer(customer));
     }
 
     @DeleteMapping("/{id}")

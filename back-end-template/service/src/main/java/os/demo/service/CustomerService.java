@@ -21,18 +21,12 @@ public class CustomerService {
         return customerRepository.save(customer).getId();
     }
 
-    public Long updateCustomer(Long id, Customer customer){
-        return customerRepository.findById(id).map(
+    public Long updateCustomer(Customer customer){
+        return customerRepository.findById(customer.getId()).map(
                 updatedCustomer -> {
-                        updatedCustomer.setFirstName(customer.getFirstName());
-                        updatedCustomer.setLastName(customer.getLastName());
-                        updatedCustomer.setEmail(customer.getEmail());
-                        updatedCustomer.setPhoneNumber(customer.getPhoneNumber());
+                        updatedCustomer.update(customer);
                         return customerRepository.save(updatedCustomer).getId();
-                }).orElseGet(() -> {
-                    customer.setId(id);
-                    return customerRepository.save(customer).getId();
-        });
+                }).orElseThrow(IllegalArgumentException::new);
     }
 
     public void deleteCustomer(Long customerId){

@@ -10,14 +10,21 @@ interface CustomerFormProps {
 const CustomerForm = (props: CustomerFormProps) => {
     const [form] = Form.useForm();
 
-    const handleSubmit = (values: any) =>
+    const handleSubmit = (values: Customer) => {
+        values.id = props.initialValues && props.initialValues.id;
+        return props.initialValues ? CustomerService.updateCustomer(values)
+            .then(() => message.success('Customer updated for id'))
+            .catch(() => message.error('Failed to update customer'))
+    :
         CustomerService.createCustomer(values)
             .then(() => message.success('Customer created'))
             .catch(() => message.error('Failed to create customer'));
+    }
 
     return <>
         <Form form={form} onFinish={handleSubmit} layout='vertical'
         initialValues={props.initialValues && {
+            id: props.initialValues.id,
             firstName: props.initialValues.firstName,
             lastName: props.initialValues.lastName,
             email: props.initialValues.email,

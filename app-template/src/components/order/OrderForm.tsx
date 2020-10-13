@@ -40,7 +40,7 @@ const OrderForm = (props: OrderFormProps) => {
             <Form.Item label={'Customer'} rules={[{required: true}]} name={'customerId'}>
                 <Select>
                     {customers.map((customer) =>
-                        <Select.Option value={customer.id}>
+                        <Select.Option value={customer.id ? customer.id : 0}>
                             {customer.firstName} {customer.lastName}
                         </Select.Option>
                     )}

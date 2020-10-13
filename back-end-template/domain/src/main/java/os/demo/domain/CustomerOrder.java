@@ -24,14 +24,12 @@ public class CustomerOrder {
     LocalDate completionDate;
     String comment;
 
-    public CustomerOrder(int addressMovingTo, int addressMovingFrom, LocalDate completionDate, String comment) {
-        this.addressMovingTo = addressMovingTo;
-        this.addressMovingFrom = addressMovingFrom;
-        this.completionDate = completionDate;
-        this.comment = comment;
-    }
-
-    public CustomerOrder() {
-
+    public void update(CustomerOrder customerOrder){
+        this.setCustomerId(customerOrder.getCustomerId());
+        this.setOrderTypeId(customerOrder.getOrderTypeId());
+        this.setAddressMovingTo(customerOrder.getAddressMovingTo());
+        this.setAddressMovingFrom(customerOrder.getAddressMovingFrom());
+        this.setCompletionDate(customerOrder.getCompletionDate());
+        this.setComment(customerOrder.getComment());
     }
 }

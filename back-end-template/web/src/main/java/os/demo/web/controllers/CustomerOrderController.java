@@ -21,18 +21,20 @@ public class CustomerOrderController {
 
     @GetMapping("/all")
     public ResponseEntity<List<CustomerOrder>> getAll(){
+        logger.info("Fetching all orders");
         return ResponseEntity.ok(customerOrderService.getAllOrders());
     }
 
     @PostMapping("/new")
     public ResponseEntity<Long> createOrder(@RequestBody CustomerOrder customerOrder){
+        logger.info("Creating order: {}", customerOrder);
         return ResponseEntity.ok(customerOrderService.createCustomerOrder(customerOrder));
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Long> updateCustomerOrder(@PathVariable Long id, @RequestBody CustomerOrder customerOrder){
+    @PutMapping()
+    public ResponseEntity<Long> updateCustomerOrder(@RequestBody CustomerOrder customerOrder){
         logger.info("updated order with id: {}", customerOrder.getId());
-        return ResponseEntity.ok(customerOrderService.updateCustomerOrder(id, customerOrder));
+        return ResponseEntity.ok(customerOrderService.updateCustomerOrder(customerOrder));
     }
 
     @DeleteMapping("/{id}")

@@ -71,6 +71,7 @@ const OrderTable = () => {
             sorter: (a: any, b: any) => a.completionDate < b.completionDate
                 ? -1 : (a.completionDate > b.completionDate ? 1 : 0)
         },
+        {title: 'Comment', dataIndex: 'comment'},
         {
             title: 'Actions',
             dataIndex: 'id',
