@@ -1,11 +1,10 @@
 import './App.css';
 import React, {useEffect, useState} from 'react';
 import {Redirect, Switch} from 'react-router-dom';
-import {Breadcrumb, Layout} from "antd";
+import {Layout} from "antd";
 import Service from "./services/Service";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
-import About from "./pages/About";
 import AppRouter from "./components/AppRouter";
 import {
     MenuUnfoldOutlined,
@@ -14,10 +13,11 @@ import {
 import CustomerPage from "./pages/CustomerPage";
 import OrderPage from "./pages/OrderPage";
 import {MetaProvider} from "./context/MetaContext";
+import AddressPage from "./pages/AddressPage";
 
 const App = () => {
 
-    const {Header, Sider, Content, Footer} = Layout;
+    const {Header, Sider, Content} = Layout;
     const [collapsed, setCollapsed] = useState(false);
 
     useEffect(() => {
@@ -31,9 +31,6 @@ const App = () => {
     return (
         <Layout style={{minHeight: '100vh'}}>
             <Sider trigger={null} collapsible collapsed={collapsed} onCollapse={toggle}>
-                <h3>
-                    <span>App</span>
-                </h3>
                 <NavBar/>
             </Sider>
             <Layout className="site-layout">
@@ -54,9 +51,9 @@ const App = () => {
                     <MetaProvider>
                         <Switch>
                             <AppRouter exact path={'/'} component={Home}/>
-                            <AppRouter exact path={'/about'} component={About}/>
                             <AppRouter exact path={'/customer'} component={CustomerPage}/>
                             <AppRouter exact path={'/order'} component={OrderPage}/>
+                            <AppRouter exact path={'/address'} component={AddressPage}/>
                             <AppRouter path={'/*'}>
                                 <Redirect to={'/'}/>
                             </AppRouter>
@@ -69,24 +66,3 @@ const App = () => {
 };
 
 export default App;
-
-/*
-    <Layout style={{minHeight: '100vh'}}>
-        <Footer style={{textAlign: 'center'}}>Created by: Øystein Seel 2020</Footer>
-        <Content className={"content"}>
-        </Content>
-        */
-
-
-
-
-
-
-
-
-
-
-
-
-
-

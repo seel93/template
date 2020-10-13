@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS Customer_Order(
   Address_Moving_From INT NOT NULL,
   Address_Moving_To INT NOT NULL,
   Completion_Date DATE NOT NULL,
-  Comment VARCHAR(128) NOT NULL,
+  Comment VARCHAR(128),
   CONSTRAINT FK_Customer_Id FOREIGN KEY (Customer_Id) REFERENCES Customer(Id),
   CONSTRAINT FK_Order_Type_Id FOREIGN KEY (Order_Type_Id) REFERENCES Order_Type(Id),
   CONSTRAINT FK_Address_Moving_From FOREIGN KEY (Address_Moving_From) REFERENCES Order_Address(Id),
