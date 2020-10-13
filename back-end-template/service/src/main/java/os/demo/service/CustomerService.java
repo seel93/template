@@ -17,10 +17,22 @@ public class CustomerService {
         return customerRepository.findAll();
     }
 
-    public Integer createCustomer(Customer customer){
-        Customer customer1 = new Customer(customer.getFirstName(), customer.getLastName(), customer.getEmail(), customer.getPhoneNumber());
-        customerRepository.save(customer1);
-        return 1;
+    public Long createCustomer(Customer customer){
+        return customerRepository.save(customer).getId();
+    }
+
+    public Long updateCustomer(Long id, Customer customer){
+        return customerRepository.findById(id).map(
+                updatedCustomer -> {
+                        updatedCustomer.setFirstName(customer.getFirstName());
+                        updatedCustomer.setLastName(customer.getLastName());
+                        updatedCustomer.setEmail(customer.getEmail());
+                        updatedCustomer.setPhoneNumber(customer.getPhoneNumber());
+                        return customerRepository.save(updatedCustomer).getId();
+                }).orElseGet(() -> {
+                    customer.setId(id);
+                    return customerRepository.save(customer).getId();
+        });
     }
 
     public void deleteCustomer(Long customerId){

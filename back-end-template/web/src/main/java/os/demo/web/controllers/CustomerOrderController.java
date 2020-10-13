@@ -19,14 +19,20 @@ public class CustomerOrderController {
     private final CustomerOrderService customerOrderService;
     private final Logger logger = LoggerFactory.getLogger(CustomerOrderController.class);
 
+    @GetMapping("/all")
+    public ResponseEntity<List<CustomerOrder>> getAll(){
+        return ResponseEntity.ok(customerOrderService.getAllOrders());
+    }
+
     @PostMapping("/new")
     public ResponseEntity<Long> createOrder(@RequestBody CustomerOrder customerOrder){
         return ResponseEntity.ok(customerOrderService.createCustomerOrder(customerOrder));
     }
 
-    @GetMapping("/all")
-    public ResponseEntity<List<CustomerOrder>> getAll(){
-        return ResponseEntity.ok(customerOrderService.getAllOrders());
+    @PutMapping("/{id}")
+    public ResponseEntity<Long> updateCustomerOrder(@PathVariable Long id, @RequestBody CustomerOrder customerOrder){
+        logger.info("updated order with id: {}", customerOrder.getId());
+        return ResponseEntity.ok(customerOrderService.updateCustomerOrder(id, customerOrder));
     }
 
     @DeleteMapping("/{id}")
@@ -35,4 +41,5 @@ public class CustomerOrderController {
         logger.info("deleted order with id: {}", id);
         return ResponseEntity.noContent().build();
     }
+
 }

@@ -20,10 +20,12 @@ const OrderForm = (props: OrderFormProps) => {
         CustomerService.fetchAllCustomers().then(setCustomers);
     }, [])
 
-    const handleSubmit = (order: CustomerOrder) =>
-        CustomerOrderService.createOrder(order)
+    const handleSubmit = (order: CustomerOrder) => {
+        return props.initialValues ? CustomerOrderService.updateOrder(props.initialValues.id ? props.initialValues.id : 0, order) :
+            CustomerOrderService.createOrder(order)
             .then(res => message.success(`Order created with id: ${res.data}`))
             .catch(() => message.error('Failed to create order'))
+    }
 
     return <>
         <Form form={form} onFinish={handleSubmit} layout='vertical'

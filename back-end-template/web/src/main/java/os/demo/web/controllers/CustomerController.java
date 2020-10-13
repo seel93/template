@@ -24,9 +24,15 @@ public class CustomerController {
     }
 
     @PostMapping("/new")
-    public ResponseEntity<Integer> newCustomer(@RequestBody Customer customer) {
+    public ResponseEntity<Long> newCustomer(@RequestBody Customer customer) {
         logger.info("Creating new customer");
         return ResponseEntity.ok(customerService.createCustomer(customer));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Long> updateCustomer(@PathVariable Long id, @RequestBody Customer customer){
+        logger.info("Updating customer with id: {}", customer.getId());
+        return ResponseEntity.ok(customerService.updateCustomer(id, customer));
     }
 
     @DeleteMapping("/{id}")

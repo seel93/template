@@ -13,6 +13,9 @@ class CustomerService {
             .then(res => res.data)
             .catch(err => err);
 
+    static updateCustomer = (customer: Customer) =>
+        apiInstance.put('/api/customer')
+
     static deleteCustomer = (id: number) =>
         apiInstance.delete(`/api/customer/${id}`)
             .then(message.success(`Deleted customer with id ${id}`))
