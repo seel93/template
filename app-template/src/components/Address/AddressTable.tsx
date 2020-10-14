@@ -12,7 +12,10 @@ const AddressTable = () => {
 
     useEffect(() => {
         AddressService.getAddresses().then(setAddresses);
-    }, [])
+    }, []);
+
+    const deleteAddress = (id: number) =>
+        AddressService.deleteAddress(id)
 
     const addressColumns = [
         {title: 'Street', dataIndex: 'street'},
@@ -29,8 +32,8 @@ const AddressTable = () => {
                     }}/>
                     <br/>
                     <Popconfirm
-                        title="Are you sure delete this task?"
-                        onConfirm={() => console.log(record)}
+                        title="Are you sure delete this address?"
+                        onConfirm={() => deleteAddress(record)}
                         okText="Yes"
                         cancelText="No"
                     >
@@ -43,9 +46,10 @@ const AddressTable = () => {
     return <>
         <Table columns={addressColumns} dataSource={addresses}/>
         <Modal
-            title="Basic Modal"
+            title={`Edit address for id: ${selectedAddress?.id}`}
             visible={visible}
             onCancel={() => setVisible(!visible)}
+            onOk={() => setVisible(!visible)}
         >
             <AddressForm initialValues={selectedAddress}/>
         </Modal>

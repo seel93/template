@@ -1,5 +1,5 @@
 export type Address = {
-    id: number,
+    id?: number,
     street: string,
     zip: string,
     city: string;

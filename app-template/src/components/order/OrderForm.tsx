@@ -6,6 +6,8 @@ import {useMetaContext} from "../../context/MetaContext";
 import AddressComponent from "../Address/AddressComponent";
 import {CustomerOrder} from "../../models/CustomerOrder";
 import CustomerOrderService from "../../services/CustomerOrderService";
+import moment from 'moment';
+import {refresh} from "../StateRefresh";
 
 interface OrderFormProps {
     initialValues?: CustomerOrder
@@ -18,12 +20,18 @@ const OrderForm = (props: OrderFormProps) => {
 
     useEffect(() => {
         CustomerService.fetchAllCustomers().then(setCustomers);
-    }, [])
+    }, []);
 
     const handleSubmit = (order: CustomerOrder) => {
-        return props.initialValues ? CustomerOrderService.updateOrder(props.initialValues.id ? props.initialValues.id : 0, order) :
+        order.id = props.initialValues?.id;
+        return props.initialValues ? CustomerOrderService.updateOrder(props.initialValues.id ? props.initialValues.id : 0, order)
+                .then(() => message.success(`Order updated with id: ${order.id}`))
+                .then(refresh)
+                .catch(() => message.error('Failed to update order'))
+            :
             CustomerOrderService.createOrder(order)
             .then(res => message.success(`Order created with id: ${res.data}`))
+                .then(refresh)
             .catch(() => message.error('Failed to create order'))
     }
 
@@ -34,7 +42,7 @@ const OrderForm = (props: OrderFormProps) => {
             orderTypeId: props.initialValues.orderTypeId,
             addressMovingFrom: props.initialValues.addressMovingFrom,
             addressMovingTo: props.initialValues.addressMovingTo,
-            //completionDate: props.initialValues.completionDate,
+            completionDate: moment(props.initialValues.completionDate),
             comment: props.initialValues.comment
         }}>
             <Form.Item label={'Customer'} rules={[{required: true}]} name={'customerId'}>

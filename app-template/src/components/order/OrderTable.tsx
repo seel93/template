@@ -9,6 +9,7 @@ import {DeleteOutlined, EditOutlined} from "@ant-design/icons";
 import {Address} from "../../models/Address";
 import AddressService from "../../services/AddressService";
 import OrderForm from "./OrderForm";
+import {refresh} from "../StateRefresh";
 
 
 const OrderTable = () => {
@@ -25,9 +26,10 @@ const OrderTable = () => {
         AddressService.getAddresses().then(setAddresses);
     }, [])
 
-    const confirm = (id: number) =>
+    const deleteOrder = (id: number) =>
         CustomerOrderService.deleteOrder(id)
-            .then(message.success('Deleted order'));
+            .then(message.success('Deleted order'))
+            .then(refresh);
 
 
     const orderColumns = [
@@ -38,11 +40,16 @@ const OrderTable = () => {
             render: (record: number) =>
                 customers.filter((customer) =>
                     customer.id === record).map((customer) =>
-                    customer.lastName)
+                    `${customer.firstName} ${customer.lastName}`)
         },
         {
             title: 'Type',
             dataIndex: 'orderTypeId',
+            filters: orderTypes.map((type) =>({
+                text: type.label,
+                value: type.id
+            })) ,
+            onFilter: (value: any, record: any) => record.orderTypeId === value,
             render: (record: number) => orderTypes.filter((type) =>
                 type.id === record).map((type) =>
                 type.label)
@@ -82,8 +89,8 @@ const OrderTable = () => {
                 }}/>
                 <br/>
                 <Popconfirm
-                    title="Are you sure delete this task?"
-                    onConfirm={() => console.log(record)}
+                    title="Are you sure delete this order?"
+                    onConfirm={() => deleteOrder(record)}
                     okText="Yes"
                     cancelText="No"
                 >

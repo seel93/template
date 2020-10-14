@@ -2,6 +2,7 @@ import React from "react"
 import {Button, Form, Input, InputNumber, message} from "antd";
 import CustomerService from "../../services/CustomerService";
 import {Customer} from "../../models/Customer";
+import {refresh} from "../StateRefresh";
 
 interface CustomerFormProps {
     initialValues?: Customer;
@@ -14,10 +15,12 @@ const CustomerForm = (props: CustomerFormProps) => {
         values.id = props.initialValues && props.initialValues.id;
         return props.initialValues ? CustomerService.updateCustomer(values)
             .then(() => message.success('Customer updated for id'))
+                .then(refresh)
             .catch(() => message.error('Failed to update customer'))
     :
         CustomerService.createCustomer(values)
             .then(() => message.success('Customer created'))
+            .then(refresh)
             .catch(() => message.error('Failed to create customer'));
     }
 

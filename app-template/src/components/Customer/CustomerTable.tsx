@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Customer} from "../../models/Customer";
 import CustomerService from "../../services/CustomerService";
 import {DeleteOutlined, EditOutlined} from "@ant-design/icons";
-import {Modal, Table} from "antd";
+import {Modal, Popconfirm, Table} from "antd";
 import AddressForm from "../Address/AddressForm";
 import {Address} from "../../models/Address";
 import CustomerForm from "./CustomerForm";
@@ -36,7 +36,14 @@ const CustomerTable = () => {
                     setSelectedCustomer(index);
                 }}/>
                 <br/>
-                <DeleteOutlined onClick={() => deleteCustomer(record)}/>
+                <Popconfirm
+                    title="Are you sure delete this customer?"
+                    onConfirm={() => deleteCustomer(record)}
+                    okText="Yes"
+                    cancelText="No"
+                >
+                    <DeleteOutlined/>
+                </Popconfirm>
             </>
         }
     ]
@@ -47,6 +54,7 @@ const CustomerTable = () => {
             title={`Edit customer: ${selectedCustomer?.firstName} ${selectedCustomer?.lastName}`}
             visible={visible}
             onCancel={() => setVisible(!visible)}
+            onOk={() => setVisible(!visible)}
         >
             <CustomerForm initialValues={selectedCustomer}/>
         </Modal>

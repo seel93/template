@@ -5,7 +5,7 @@ class AddressService {
     static getAddresses = () =>
         apiInstance.get('/api/address/all').then(res => res.data);
 
-    static addAddress = (address: Address) =>
+    static createAddress = (address: Address) =>
         apiInstance.post('/api/address/new', address).then(res => res.data);
 
     static updateAddress = (id: number, address: Address) =>

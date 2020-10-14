@@ -22,7 +22,7 @@ const AddressComponent = (props: AddressComponentProps) => {
     return <>
             <Select onChange={handleSelectedAddress} value={props.value}>
                 {addresses.map((address) =>
-                    <Select.Option key={address.id} value={address.id}>
+                    <Select.Option key={address.id} value={address.id ? address.id : 0}>
                         {address.street} {address.zip} {address.city}
                     </Select.Option>
                 )}

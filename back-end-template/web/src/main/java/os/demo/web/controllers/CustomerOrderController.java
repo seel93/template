@@ -31,7 +31,7 @@ public class CustomerOrderController {
         return ResponseEntity.ok(customerOrderService.createCustomerOrder(customerOrder));
     }
 
-    @PutMapping()
+    @PutMapping("/{id}")
     public ResponseEntity<Long> updateCustomerOrder(@RequestBody CustomerOrder customerOrder){
         logger.info("updated order with id: {}", customerOrder.getId());
         return ResponseEntity.ok(customerOrderService.updateCustomerOrder(customerOrder));

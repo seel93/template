@@ -910,232 +910,217 @@ APPLICATION_PASSWORD_ADMIN,AUDIT_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTI
     </user>
     <table id="284" parent="2" name="customer"/>
     <table id="285" parent="2" name="customer_order"/>
-    <table id="286" parent="2" name="domain_entity"/>
-    <table id="287" parent="2" name="flyway_schema_history"/>
-    <table id="288" parent="2" name="hibernate_sequence"/>
-    <table id="289" parent="2" name="order_address"/>
-    <table id="290" parent="2" name="order_type"/>
-    <column id="291" parent="284" name="Id">
+    <table id="286" parent="2" name="flyway_schema_history"/>
+    <table id="287" parent="2" name="hibernate_sequence"/>
+    <table id="288" parent="2" name="order_address"/>
+    <table id="289" parent="2" name="order_type"/>
+    <column id="290" parent="284" name="Id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="292" parent="284" name="First_Name">
+    <column id="291" parent="284" name="First_Name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="293" parent="284" name="Last_Name">
+    <column id="292" parent="284" name="Last_Name">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="294" parent="284" name="Email">
+    <column id="293" parent="284" name="Email">
       <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="295" parent="284" name="Phone_Number">
+    <column id="294" parent="284" name="Phone_Number">
       <Position>5</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="296" parent="284" name="PRIMARY">
+    <key id="295" parent="284" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="297" parent="285" name="Id">
+    <column id="296" parent="285" name="Id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="298" parent="285" name="Customer_Id">
+    <column id="297" parent="285" name="Customer_Id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="299" parent="285" name="Order_Type_Id">
+    <column id="298" parent="285" name="Order_Type_Id">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="300" parent="285" name="Address_Moving_From">
+    <column id="299" parent="285" name="Address_Moving_From">
       <Position>4</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="301" parent="285" name="Address_Moving_To">
+    <column id="300" parent="285" name="Address_Moving_To">
       <Position>5</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="302" parent="285" name="Completion_Date">
+    <column id="301" parent="285" name="Completion_Date">
       <Position>6</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="303" parent="285" name="Comment">
+    <column id="302" parent="285" name="Comment">
       <Position>7</Position>
       <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="304" parent="285" name="FK_Customer_Id">
+    <index id="303" parent="285" name="FK_Customer_Id">
       <ColNames>Customer_Id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="305" parent="285" name="FK_Order_Type_Id">
+    <index id="304" parent="285" name="FK_Order_Type_Id">
       <ColNames>Order_Type_Id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="306" parent="285" name="FK_Address_Moving_From">
+    <index id="305" parent="285" name="FK_Address_Moving_From">
       <ColNames>Address_Moving_From</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="307" parent="285" name="FK_Address_Moving_To">
+    <index id="306" parent="285" name="FK_Address_Moving_To">
       <ColNames>Address_Moving_To</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="308" parent="285" name="PRIMARY">
+    <key id="307" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="309" parent="285" name="FK_Customer_Id">
+    <foreign-key id="308" parent="285" name="FK_Customer_Id">
       <ColNames>Customer_Id</ColNames>
       <RefTableName>customer</RefTableName>
       <RefColNames>Id</RefColNames>
     </foreign-key>
-    <foreign-key id="310" parent="285" name="FK_Order_Type_Id">
+    <foreign-key id="309" parent="285" name="FK_Order_Type_Id">
       <ColNames>Order_Type_Id</ColNames>
       <RefTableName>order_type</RefTableName>
       <RefColNames>Id</RefColNames>
     </foreign-key>
-    <foreign-key id="311" parent="285" name="FK_Address_Moving_From">
+    <foreign-key id="310" parent="285" name="FK_Address_Moving_From">
       <ColNames>Address_Moving_From</ColNames>
       <RefTableName>order_address</RefTableName>
       <RefColNames>Id</RefColNames>
     </foreign-key>
-    <foreign-key id="312" parent="285" name="FK_Address_Moving_To">
+    <foreign-key id="311" parent="285" name="FK_Address_Moving_To">
       <ColNames>Address_Moving_To</ColNames>
       <RefTableName>order_address</RefTableName>
       <RefColNames>Id</RefColNames>
     </foreign-key>
-    <column id="313" parent="286" name="id">
-      <Position>1</Position>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="314" parent="286" name="name">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-    </column>
-    <key id="315" parent="286" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="316" parent="287" name="installed_rank">
+    <column id="312" parent="286" name="installed_rank">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="317" parent="287" name="version">
+    <column id="313" parent="286" name="version">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
     </column>
-    <column id="318" parent="287" name="description">
+    <column id="314" parent="286" name="description">
       <Position>3</Position>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="319" parent="287" name="type">
+    <column id="315" parent="286" name="type">
       <Position>4</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="320" parent="287" name="script">
+    <column id="316" parent="286" name="script">
       <Position>5</Position>
       <DataType>varchar(1000)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="321" parent="287" name="checksum">
+    <column id="317" parent="286" name="checksum">
       <Position>6</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="322" parent="287" name="installed_by">
+    <column id="318" parent="286" name="installed_by">
       <Position>7</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="323" parent="287" name="installed_on">
+    <column id="319" parent="286" name="installed_on">
       <Position>8</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <column id="324" parent="287" name="execution_time">
+    <column id="320" parent="286" name="execution_time">
       <Position>9</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="325" parent="287" name="success">
+    <column id="321" parent="286" name="success">
       <Position>10</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="326" parent="287" name="flyway_schema_history_s_idx">
+    <index id="322" parent="286" name="flyway_schema_history_s_idx">
       <ColNames>success</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="327" parent="287" name="PRIMARY">
+    <key id="323" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>installed_rank</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="328" parent="288" name="next_val">
+    <column id="324" parent="287" name="next_val">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
     </column>
-    <column id="329" parent="289" name="Id">
+    <column id="325" parent="288" name="Id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="330" parent="289" name="Street">
+    <column id="326" parent="288" name="Street">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="331" parent="289" name="Zip">
+    <column id="327" parent="288" name="Zip">
       <Position>3</Position>
       <DataType>varchar(4)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="332" parent="289" name="City">
+    <column id="328" parent="288" name="City">
       <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="333" parent="289" name="PRIMARY">
+    <key id="329" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="334" parent="290" name="Id">
+    <column id="330" parent="289" name="Id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="335" parent="290" name="Label">
+    <column id="331" parent="289" name="Label">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
     </column>
-    <column id="336" parent="290" name="Description">
+    <column id="332" parent="289" name="Description">
       <Position>3</Position>
       <DataType>varchar(128)|0s</DataType>
     </column>
-    <key id="337" parent="290" name="PRIMARY">
+    <key id="333" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Id</ColNames>
       <Primary>1</Primary>

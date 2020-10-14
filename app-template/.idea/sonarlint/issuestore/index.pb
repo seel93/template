@@ -7,8 +7,6 @@ I
 package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
 B
 src/pages/Home.tsx,f\e\fee995f2e145c3f9ceb6f7fd48d1f22b3c792a95
-G
-src/services/Service.ts,e\4\e4a548851f3a5b613e2e08e822a73a3f82f0dfc4
 ;
 src/App.tsx,8\3\835da56f32df714aaed6285a5b7fc3a7807851e4
 I
@@ -27,8 +25,6 @@ E
 src/models/Address.ts,1\5\15ba7a807aa70e996b5d526d81348f4b1071aaad
 N
 src/services/AddressService.ts,e\2\e2e5a11ccc9602c3a4b5d69001fc5ed2b071f1c2
-Z
-*src/components/common/AddressComponent.tsx,7\3\73d6e7e3747fdda038d7d2327a1530ae44ac9b4c
 R
 "src/components/order/OrderForm.tsx,d\e\de34a6cd83f9e974100a46a7e500f2320a45b57f
 =
@@ -39,3 +35,17 @@ T
 $src/services/CustomerOrderService.ts,e\a\ea28aa0cce5094658aa85ece8204a48da5cc84fc
 S
 #src/components/order/OrderTable.tsx,f\c\fcebdc34a5ee312c766bb47ff24d8bfd34899e11
+J
+src/pages/CustomerPage.tsx,0\9\094178cc5660cf0ec7e6d0b633590aa335bedcc0
+F
+src/models/Customer.ts,c\4\c4b4896290cc0fe7a5b51a6b0b94a37bd6caa0a8
+O
+src/services/CustomerService.ts,a\1\a1e3ab053b98596bf8aea0fa89c00aec5afcf137
+Y
+)src/components/Customer/CustomerTable.tsx,a\4\a45d981f9031f7e1a71c267d3ea002b7a06011dc
+W
+'src/components/Address/AddressTable.tsx,6\9\692a56b64ae786063666554a47b0c583baf5f381
+V
+&src/components/Address/AddressForm.tsx,b\e\bece167d9c63efe124a069c87932b89569f99769
+[
++src/components/Address/AddressComponent.tsx,e\f\ef016eec52480ef5a7381a86425bda6482ba0da3
