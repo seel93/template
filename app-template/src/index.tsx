@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter as Router} from 'react-router-dom';
+const bunyan = require('bunyan');
+export const log = bunyan.createLogger({name: 'app'})
+
 
 ReactDOM.render(
     <Suspense fallback={<div>Loading...</div>}>

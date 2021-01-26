@@ -1,27 +1,24 @@
 import React from 'react';
-import {Button, Form, Input, message} from "antd";
+import {Button, Form, Input} from "antd";
 import {Address} from "../../models/Address";
 import AddressService from "../../services/AddressService";
-import {refresh} from "../StateRefresh";
 
 interface AddressFormProps {
     initialValues?: Address;
+    onChange?: Function;
 }
 
 const AddressForm = (props: AddressFormProps) => {
     const [form] = Form.useForm();
+
     const handleSubmit = (address: Address) => {
         address.id = props.initialValues && props.initialValues.id;
         return props.initialValues ?
             AddressService.updateAddress(props.initialValues.id ? props.initialValues.id : 0, address)
-                .then(() => message.success(`Address updated with id: ${address.id}`))
-                .then(refresh)
-                .catch(() => message.error('Failed to update address'))
+                .then(() => props.onChange)
             :
             AddressService.createAddress(address)
-                .then((res) => message.success(`Address created with id: ${res.data}`))
-                .then(refresh)
-                .catch(() => message.error('Failed to create address'))
+                .then(() => props.onChange)
     }
 
     return <>

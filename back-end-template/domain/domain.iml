@@ -128,5 +128,18 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:5.2.4.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.6.3" level="project" />
     <orderEntry type="library" name="Maven: com.google.collections:google-collections:1.0-rc2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.testcontainers:mysql:1.15.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.testcontainers:jdbc:1.15.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.testcontainers:database-commons:1.15.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.testcontainers:testcontainers:1.15.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.12" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:2.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.commons:commons-compress:1.20" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.rnorth.duct-tape:duct-tape:1.0.8" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.rnorth.visible-assertions:visible-assertions:2.1.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: net.java.dev.jna:jna:4.5.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.github.docker-java:docker-java-api:3.2.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.github.docker-java:docker-java-transport-zerodep:3.2.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.github.docker-java:docker-java-transport:3.2.7" level="project" />
   </component>
 </module>

@@ -1,5 +1,6 @@
 package os.demo.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,6 +12,8 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 public class Customer {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)

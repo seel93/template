@@ -41,3 +41,5 @@ u
 Eweb/src/main/java/os/demo/web/controllers/OrderAddressController.java,a\e\ae2352fdbd76e33d816eb8bc3b5d8d488827a4bc
 n
 >service/src/main/java/os/demo/service/OrderAddressService.java,3\c\3cff6c7761b807bc74419df28270f85cb09b1bcf
+h
+8web/src/test/java/CustomerRepositoryIntegrationTest.java,e\e\ee37d85d142668d27b89c543b0f9ef8092adc641

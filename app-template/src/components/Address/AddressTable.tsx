@@ -10,12 +10,14 @@ const AddressTable = () => {
     const [visible, setVisible] = useState<boolean>(false);
     const [selectedAddress, setSelectedAddress] = useState<Address>();
 
+    const fetchAddresses = () => AddressService.getAddresses().then(setAddresses);
+
     useEffect(() => {
-        AddressService.getAddresses().then(setAddresses);
+        fetchAddresses();
     }, []);
 
     const deleteAddress = (id: number) =>
-        AddressService.deleteAddress(id)
+        AddressService.deleteAddress(id).then(fetchAddresses);
 
     const addressColumns = [
         {title: 'Street', dataIndex: 'street'},
@@ -51,7 +53,7 @@ const AddressTable = () => {
             onCancel={() => setVisible(!visible)}
             onOk={() => setVisible(!visible)}
         >
-            <AddressForm initialValues={selectedAddress}/>
+            <AddressForm initialValues={selectedAddress} onChange={() => fetchAddresses()} />
         </Modal>
     </>
 }
