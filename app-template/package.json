@@ -13,7 +13,7 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "antd": "^4.6.6",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bunyan": "^1.8.15",
     "http-proxy-middleware": "^1.0.0",
     "react": "^16.13.0",
